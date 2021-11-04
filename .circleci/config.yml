@@ -1,7 +1,13 @@
 workflows: 
   version: 2
   build_and_upload: 
-  
+    triggers:
+      - schedule:
+          cron: "* * * * *"
+          filters:
+            branches:
+              only:
+                - master  
     jobs:
       - check_versions:
           filters:
