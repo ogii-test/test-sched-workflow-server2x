@@ -4,13 +4,18 @@ workflows:
     triggers:
       - schedule:
           cron: "* * * * *"
+          
+    jobs:
+      - check_versions:
           filters:
             branches:
               only:
                 - master  
-    jobs:
-      - check_versions
-      - release_version
+      - release_version:
+          filters:
+            branches:
+              only:
+                - master  
       
   build_and_upload:  
     jobs:
