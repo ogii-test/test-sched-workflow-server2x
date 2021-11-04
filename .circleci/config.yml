@@ -7,7 +7,7 @@ workflows:
           filters:
             branches:
               only:
-                - master   
+                - master  
     jobs:
       - check_versions
       - release_version
