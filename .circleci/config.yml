@@ -26,11 +26,6 @@ workflows:
                 - approved
                 
 jobs:
-  build:
-    docker:
-      - image: circleci/openjdk:8-jdk
-    steps:
-      - checkout
   check_versions:
     docker:
       - image: circleci/openjdk:8-jdk
