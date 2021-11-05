@@ -1,4 +1,4 @@
-workflows:
+workflows: 
   version: 2
   build: 
     triggers:
